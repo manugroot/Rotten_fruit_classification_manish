@@ -42,3 +42,42 @@ After compiling th model fit the model which starts the training the model with 
 Here, I performed 8 epochs.
 
 **MODEL SUMMARY:**
+
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 18, 18, 32)        896       
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 9, 9, 32)         0         
+ )                                                               
+                                                                 
+ conv2d_1 (Conv2D)           (None, 7, 7, 64)          18496     
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 3, 3, 64)         0         
+ 2D)                                                             
+                                                                 
+ flatten (Flatten)           (None, 576)               0         
+                                                                 
+ dense (Dense)               (None, 128)               73856     
+                                                                 
+ dense_1 (Dense)             (None, 128)               16512     
+                                                                 
+ dense_2 (Dense)             (None, 6)                 774       
+                                                                 
+=================================================================
+Total params: 110,534
+Trainable params: 110,534
+Non-trainable params: 0
+
+**ACCURACY**
+
+FOR VALIDATION SET:
+
+88/88 [==============================] - 10s 116ms/step - loss: 0.1493 - accuracy: 0.9463
+[0.14931315183639526, 0.9462810158729553]
+
+FOR TESTING SET:
+
+22/22 [==============================] - 2s 108ms/step - loss: 0.1340 - accuracy: 0.9461
+[0.1340177357196808, 0.946096658706665]
